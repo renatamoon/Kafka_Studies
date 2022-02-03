@@ -165,7 +165,9 @@ A rest API do ksqlDB – faz o envio de dados granularizados (selecionados) para
 ![image](https://user-images.githubusercontent.com/87100340/152412814-56609b51-1d90-462a-b19c-fb38b5295925.png)
 
 
-### COMANDOS PARA USO DO KAFKA
+### COMANDOS PARA USO DO KAFKA NO PYTHON
+
+- Instalando o Kafka: `pip install kafka-python`
 
 - Creating User: `sudo adduser kafka`
 - Adding Kafka Use to the group: `sudo adduser kafka sudo`
