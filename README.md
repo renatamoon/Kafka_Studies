@@ -203,3 +203,7 @@ Entrando dentro do tópico onde mostra os usuários registrados:
 
 ![image](https://user-images.githubusercontent.com/87100340/152453650-77ed90ad-60d4-481f-89a0-2740e0d287ec.png)
 
+
+## USANDO O KAFKA PURO DENTRO DO TERMINAL
+
+- docker exec -it kafka-fullcycle_kafka_1 bash
