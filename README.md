@@ -166,8 +166,19 @@ A rest API do ksqlDB – faz o envio de dados granularizados (selecionados) para
 
 ### COMANDOS PARA USO DE IMAGEM DOCKER DO KAFKA
 
+#### INSTALAÇÃO DO DOCKER COMPOSE
+- `sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose`
+
+- `sudo chmod +x /usr/local/bin/docker-compose`
+
+- `docker-compose --version`
+
+- Arquivo `docker-compose.yml` deve estar dentro da aplicação.
+
 - O serviço zookeeper será criado a partir da imagem `confluentinc/cp-zookeeper`, representando a instância do ZooKeeper;
 - Já o serviço kafka fará uso da imagem `confluentinc/cp-kafka`, correspondendo a uma instância do Apache Kafka acessível externamente na porta 9092 (e internamente para a network broker-kafka na porta 29092). Este container também referencia a instância do ZooKeeper em depends_on;
+
+- Para usar os comandos abaixo, devemos estar no mesmo nível onde o arquivo `docker-compose.yml` está.
 
 - `docker-compose up -d` criará um network e os containers esperados, realizando inclusive o download de imagens se as mesmas nao existirem na maquina;
 
