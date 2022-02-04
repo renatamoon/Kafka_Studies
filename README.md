@@ -1,5 +1,4 @@
 # Kafka_Studies
-<hr>
 
 ### Links:
 
