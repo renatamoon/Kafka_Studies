@@ -165,6 +165,20 @@ A rest API do ksqlDB – faz o envio de dados granularizados (selecionados) para
 ![image](https://user-images.githubusercontent.com/87100340/152412814-56609b51-1d90-462a-b19c-fb38b5295925.png)
 
 
+### COMANDOS PARA USO DE IMAGEM DOCKER DO KAFKA
+
+- O serviço zookeeper será criado a partir da imagem `confluentinc/cp-zookeeper`, representando a instância do ZooKeeper;
+- Já o serviço kafka fará uso da imagem `confluentinc/cp-kafka`, correspondendo a uma instância do Apache Kafka acessível externamente na porta 9092 (e internamente para a network broker-kafka na porta 29092). Este container também referencia a instância do ZooKeeper em depends_on;
+
+- `docker-compose up -d` criará um network e os containers esperados, realizando inclusive o download de imagens se as mesmas nao existirem na maquina;
+
+- `docker network ls` podemos verificar que a rede broker-kafka foi iniciada com sucesso;
+
+- `docker-compose ps` mostrará que os containers do Kafka (porta 9092), do Kafdrop (porta 19000) e do ZooKeeper foram gerados;
+
+- TESTANDO O AMBIENTE: Um teste de acesso via browser ao Kafdrop `(http://localhost:19000)` exibirá a tela inicial desta solução;
+
+
 ### COMANDOS PARA USO DO KAFKA NO PYTHON
 
 - Instalando o Kafka: `pip install kafka-python`
