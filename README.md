@@ -178,11 +178,18 @@ A rest API do ksqlDB – faz o envio de dados granularizados (selecionados) para
 
 - TESTANDO O AMBIENTE: Um teste de acesso via browser ao Kafdrop `(http://localhost:19000)` exibirá a tela inicial desta solução;
 
+#### DANDO UM DOCKER COMPOSE:
 
-### COMANDOS PARA USO DO KAFKA NO PYTHON
+Podemos olhar as portas com as quais o kafka faz acesso. Desta forma, para o nosso sistema gerador de usuarios, temos sempre que usar a 9092 dentro do nosso código.
 
-- Instalando o Kafka: `pip install kafka-python`
+![image](https://user-images.githubusercontent.com/87100340/152453782-f7aa7e9a-d862-43e7-8c51-6719295734e0.png)
 
-- Creating User: `sudo adduser kafka`
-- Adding Kafka Use to the group: `sudo adduser kafka sudo`
-- Loging to the Kafka account: `su -l kafka`
+
+#### IMAGEM DO KafDrop rodando na porta 19000:
+
+![image](https://user-images.githubusercontent.com/87100340/152453684-9026c5cd-446a-4eac-bd6a-25ddaa9f2786.png)
+
+Entrando dentro do tópico onde mostra os usuários registrados:
+
+![image](https://user-images.githubusercontent.com/87100340/152453650-77ed90ad-60d4-481f-89a0-2740e0d287ec.png)
+
